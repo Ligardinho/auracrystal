@@ -14,7 +14,7 @@ const categories = [
 
 export function CategoryNav() {
   return (
-    <div className="border-b border-border bg-card">
+    <div className="border-b border-border bg-card lg:flex hidden">
       <div className="container mx-auto">
         <div className="flex items-center justify-between py-4 gap-2 mx-20">
           {categories.map((category) => (

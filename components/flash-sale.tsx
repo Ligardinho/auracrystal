@@ -57,7 +57,7 @@ export function FlashSale() {
   }, [])
 
   return (
-    <div className="py-16 bg-background">
+    <div className="py-16 bg-background md:flex hidden">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between mb-10">
           <div className="flex items-center gap-6">
