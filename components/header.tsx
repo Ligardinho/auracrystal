@@ -1,11 +1,19 @@
+'use client'
+
 import Link from "next/link"
 import { ShoppingCart, User, Search, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { motion } from "motion/react"
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
+    <motion.header 
+      className="sticky top-0 z-50 w-full border-b border-border bg-background"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container mx-auto px-6">
         {/* Top bar */}
         <div className="flex items-center justify-between py-4 text-sm border-b border-border/50">
@@ -51,9 +59,6 @@ export function Header() {
             <Button variant="ghost" size="icon">
               <Search className="h-5 w-5 lg:hidden" />
             </Button>
-            <Button variant="ghost" size="icon">
-              <User className="h-5 w-5" />
-            </Button>
             <Button variant="ghost" size="icon" className="relative">
               <ShoppingCart className="h-5 w-5" />
               <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
@@ -63,6 +68,6 @@ export function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   )
 }

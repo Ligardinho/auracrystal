@@ -1,5 +1,9 @@
+"use client"
+
 import { Sparkles, Gem, Gift, Heart, Home, ShoppingBag, Star, Grid3x3 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { motion } from "motion/react"
+import { once } from "events"
 
 const categories = [
   { icon: Gem, label: "Crystals" },
@@ -14,7 +18,13 @@ const categories = [
 
 export function CategoryNav() {
   return (
-    <div className="border-b border-border bg-card lg:flex hidden">
+    <motion.div 
+      className="border-b border-border bg-card lg:flex hidden"   
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.5 }} // <— important
+      transition={{ duration: 0.5 }}
+    >
       <div className="container mx-auto">
         <div className="flex items-center justify-between py-4 gap-2 mx-20">
           {categories.map((category) => (
@@ -31,6 +41,6 @@ export function CategoryNav() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

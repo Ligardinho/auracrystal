@@ -113,6 +113,7 @@ export function ProductGrid() {
             <Card
               key={product.id}
               className="group relative overflow-hidden border-border hover:border-primary transition-all"
+              data-aos="fade-up-right"
             >
               <Button
                 variant="ghost"
