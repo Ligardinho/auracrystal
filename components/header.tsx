@@ -40,7 +40,7 @@ export function Header() {
               <Menu className="h-5 w-5" />
             </Button>
 
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center motion-preset-typewriter">
               <h1 className="text-3xl font-serif font-bold text-primary tracking-tight">aura crystals</h1>
             </Link>
           </div>
@@ -61,7 +61,7 @@ export function Header() {
             </Button>
             <Button variant="ghost" size="icon" className="relative">
               <ShoppingCart className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center motion-preset-blink motion-duration-2000">
                 2
               </span>
             </Button>
